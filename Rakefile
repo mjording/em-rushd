@@ -8,7 +8,7 @@ begin
     gem.summary = %Q{Rushd implementation with eventmachine}
     gem.description = %Q{Rushd implementation with eventmachine}
     gem.email = "mjording@opengotham.com"
-    gem.homepage = "http://github.com/opengotham/em-rushd"
+    gem.homepage = "http://github.com/mjording/em-rushd"
     gem.authors = ["matthew jording"]
     gem.add_development_dependency "rspec", ">= 1.2.9"
     gem.add_dependency 'mjording_rush'
