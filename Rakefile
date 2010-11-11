@@ -21,19 +21,19 @@ rescue LoadError
   puts "Jeweler (or a dependency) not available. Install it with: gem install jeweler"
 end
 
-require 'spec/rake/spectask'
-Spec::Rake::SpecTask.new(:spec) do |spec|
-  spec.libs << 'lib' << 'spec'
-  spec.spec_files = FileList['spec/**/*_spec.rb']
-end
-
-Spec::Rake::SpecTask.new(:rcov) do |spec|
-  spec.libs << 'lib' << 'spec'
-  spec.pattern = 'spec/**/*_spec.rb'
-  spec.rcov = true
-end
-
-task :spec => :check_dependencies
+# require 'spec/rake/spectask'
+# Spec::Rake::SpecTask.new(:spec) do |spec|
+#   spec.libs << 'lib' << 'spec'
+#   spec.spec_files = FileList['spec/**/*_spec.rb']
+# end
+# 
+# Spec::Rake::SpecTask.new(:rcov) do |spec|
+#   spec.libs << 'lib' << 'spec'
+#   spec.pattern = 'spec/**/*_spec.rb'
+#   spec.rcov = true
+# end
+# 
+# task :spec => :check_dependencies
 
 begin
   require 'reek/adapters/rake_task'
@@ -47,8 +47,8 @@ rescue LoadError
     abort "Reek is not available. In order to run reek, you must: sudo gem install reek"
   end
 end
-
-task :default => :spec
+# 
+# task :default => :spec
 
 require 'rake/rdoctask'
 Rake::RDocTask.new do |rdoc|
